@@ -16,7 +16,7 @@
 CREATE DATABASE IF NOT EXISTS `trabalho_integrador` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
 USE `trabalho_integrador`;
 
--- Copiando estrutura para tabela trabalho_integrador.audio
+-- Copiando estrutura para tabela trabalho_integrador.material
 CREATE TABLE IF NOT EXISTS `audio` (
   `id_audio` int(11) NOT NULL AUTO_INCREMENT,
   `nome_audio` varchar(45) COLLATE utf8_bin NOT NULL,
@@ -28,9 +28,9 @@ CREATE TABLE IF NOT EXISTS `audio` (
   CONSTRAINT `FK_audio_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Copiando dados para a tabela trabalho_integrador.audio: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `audio` DISABLE KEYS */;
-/*!40000 ALTER TABLE `audio` ENABLE KEYS */;
+-- Copiando dados para a tabela trabalho_integrador.material: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `material` DISABLE KEYS */;
+/*!40000 ALTER TABLE `material` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela trabalho_integrador.avaliacao_audio
 CREATE TABLE IF NOT EXISTS `avaliacao_audio` (
