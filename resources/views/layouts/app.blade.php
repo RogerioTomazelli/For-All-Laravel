@@ -21,6 +21,9 @@
     <style>
         .estilo-barra {
             background: #28d1e0;
+        };
+        .texto{
+            size: 50px;
         }
 
     </style>
@@ -30,9 +33,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark shadow-sm estilo-barra">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    For All
-                </a>
+                <a class="navbar-brand" href="{{ url('/home') }}"><h1 class="texto">For All</h1></a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,37 +50,23 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" style="color:white;  font-size: 18px;" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" style="color:white;  font-size: 18px;" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                         <div class="row mr-5">
                             <ul class="float-right">
-                                <li class="nav-item">
-                                <a href="perfil.html" class="text-white perfil-link">perfil</a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="" class="text-white">editar</a>
-                                </li>
-                            </ul>
-                            <ul class="navbar-nav float-right">
-                                <li class="nav-item">
-                                <a class="nav-link p-0" href="#">
-                                <img src="https://i.ibb.co/tZjK826/cachorro.png" alt="avatar image" height="70" class="img-perfil">
-                                </a>
-                                </li>
-                            </ul>
-                        </div>
-                            <!-- <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" style="color:white;  font-size: 20px;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Perfil</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -89,14 +77,24 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li> -->
+                            </li> 
+                            </ul>
+                            <ul class="navbar-nav float-right">
+                                <li class="nav-item">
+                                <a class="nav-link p-0" href="#">
+                                <img src="https://i.ibb.co/tZjK826/cachorro.png" alt="avatar image" height="70" class="img-perfil">
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                            
                         @endguest
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <main class="py-4" style="background-color: #b0edf5;">
+        <main class="py-4" style="background-color: #ADD8E6;">
             @yield('content')
         </main>
     </div>
