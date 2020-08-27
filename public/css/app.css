@@ -10968,8 +10968,14 @@ body{
 
 .cor-botao{
   background-color: white;
-  color: #ADD8E6;
+  color: #ADD8E6; 
 }
+ li{
+   list-style: none;
+ }
+ .img-perfil{
+   margin-left: 10px;
+ }
 .float-label-control { position: relative; margin-bottom: 1.5em; }
   .float-label-control ::-webkit-input-placeholder { color: transparent; }
   .float-label-control :-moz-placeholder { color: transparent; }

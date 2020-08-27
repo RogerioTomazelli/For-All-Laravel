@@ -56,7 +56,24 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
+                        <div class="row mr-5">
+                            <ul class="float-right">
+                                <li class="nav-item">
+                                <a href="perfil.html" class="text-white perfil-link">perfil</a>
+                                </li>
+                                <li class="nav-item">
+                                <a href="" class="text-white">editar</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav float-right">
+                                <li class="nav-item">
+                                <a class="nav-link p-0" href="#">
+                                <img src="https://i.ibb.co/tZjK826/cachorro.png" alt="avatar image" height="70" class="img-perfil">
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                            <!-- <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
@@ -72,7 +89,7 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
+                            </li> -->
                         @endguest
                     </ul>
                 </div>
