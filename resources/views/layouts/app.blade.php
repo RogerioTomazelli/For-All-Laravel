@@ -19,9 +19,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
-        .estilo-barra {
-            background: #28d1e0;
-        };
         .texto{
             size: 50px;
         }
@@ -94,7 +91,7 @@
             </div>
         </nav>
 
-        <main class="py-4" style="background-color: #ADD8E6;">
+        <main class="py-4" style="background-color: rgb(198, 237, 250)">
             @yield('content')
         </main>
     </div>

@@ -8633,10 +8633,10 @@ button.bg-dark:focus {
   padding-right: 1.5rem !important;
 }
 
-.pb-4,
+/* .pb-4,
 .py-4 {
   padding-bottom: 1.5rem !important;
-}
+} */
 
 .pl-4,
 .px-4 {
@@ -10938,15 +10938,25 @@ body{
   
 }
 
+.rodape{
+  text-align: center;
+  color: white;
+  padding-top: 40px;
+  background-color: #37BFC4;
+  height: 100px;
+}
+
 .titulo-principal{
   font-family: "Perpetua Titling MT", serif;
   font-size: 75px;
   margin-top: 50px;
+  color: #37BFC4 !important; /*importante fica por cima do resto*/ 
 }
 
 .texto-principal{
   font-family: serif;
   font-size: 30px;
+  color: #37BFC4;
 }
 
 .imagem-perfil{
@@ -10963,7 +10973,7 @@ body{
 
 .row{
   margin-left: 30px;
-  margin-bottom: 40px;;
+  margin-right: 0px !important;
 }
 
 .cor-botao{
