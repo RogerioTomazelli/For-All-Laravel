@@ -10935,7 +10935,22 @@ body{
 
 .imagem-principal{
   margin-top: 30px;
-  
+}
+
+@media (max-width: 768px) 
+{
+  .imagem-principal 
+   {
+    height: 400px;
+    }
+}
+
+@media (max-width: 438px) 
+{
+  .imagem-principal 
+   {
+    height: 300px;
+    }
 }
 
 .rodape{
@@ -10972,7 +10987,7 @@ body{
 }
 
 .row{
-  margin-left: 30px;
+  margin-left: 0px !important;
   margin-right: 0px !important;
 }
 
@@ -11019,5 +11034,92 @@ body{
   .float-label-control input:focus{
       background-color: #ADD8E6;
   }
+  .box-part{
+    background:#FFF;
+    border-radius:0;
+    padding:60px 10px;
+    margin:30px 0px;
+}
 
+.botao-pesquisa{
+  background-color: #37BFC4;
+  color: white;
+  border-color: #37BFC4;
+}
 
+.botao-pesquisa:hover{
+  background-color: #37BFC4;
+  color: white;
+  border-color: #37BFC4;
+}
+
+.botao-pesquisa:active{
+  background-color: #37BFC4;
+  color: white;
+  border-color: #37BFC4;
+}
+
+.conteudo{
+  float: right; 
+  width: 73%;
+}
+
+.edit-principal{
+  min-height: 768px;
+  padding-top: 20px;
+}
+
+.descricao{
+  float: left;
+  width: 25%;
+  font-family: "Perpetua Titling MT", serif;
+}
+
+.descricao h2{
+  color: #37BFC4;
+}
+
+.descricao p{
+  color: #37BFC4;
+}
+
+.lista-principal{
+  min-height: 768px;
+}
+
+.img-perfil{
+  margin-bottom: 10px;
+}
+
+.border-video{
+  border: 10px solid #37BFC4;
+}
+
+@media (max-width: 768px) 
+{
+  .nome 
+   {
+    background-color: #37BFC4;
+    z-index: 1000;
+    float: right;
+    padding: 10px
+    }
+}
+
+.icone-user{
+  margin-bottom: 20px;
+}
+
+.icone-user i{
+  font-size: 150px;
+}
+
+.container-login{
+  min-height: 520px;
+}
+
+.botao-login{
+  background-color: #37BFC4;
+  color: white;
+  border-color:  #37BFC4;
+}

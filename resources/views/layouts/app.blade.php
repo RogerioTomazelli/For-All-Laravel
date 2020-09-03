@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -43,7 +44,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto nome">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -51,7 +52,7 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color:white;  font-size: 18px;" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" style="color:white;  font-size: 18px;" href="{{ route('register') }}">{{ __('Registrar') }}</a>
                                 </li>
                             @endif
                         @else
@@ -76,7 +77,7 @@
                                 </div>
                             </li> 
                             </ul>
-                            <ul class="navbar-nav float-right">
+                            <ul class="navbar-nav float-right"> 
                                 <li class="nav-item">
                                 <a class="nav-link p-0" href="#">
                                 <img src="https://i.ibb.co/tZjK826/cachorro.png" alt="avatar image" height="70" class="img-perfil">

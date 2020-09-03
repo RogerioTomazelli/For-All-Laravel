@@ -33,5 +33,4 @@ Route::get('download/{file}', function ($file = '') {
     return response()->download(storage_path('app/public/upload/arquivos/' . $file));
 });
 
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'MaterialController@index')->name('home');

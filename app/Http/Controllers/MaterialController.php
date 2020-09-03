@@ -83,6 +83,10 @@ class MaterialController extends Controller
     {
         return view('material.edit', compact('material'));
     }
+    public function visualizar(MaterialModel $material)
+    {
+        return view('material.edit', compact('material'));
+    }
 
     /**
      * Update the specified resource in storage.
@@ -142,7 +146,7 @@ class MaterialController extends Controller
         $query = DB::table('material');
 
         if (!empty($nome)) {
-            $query->where('nome', 'like', '%' . $nome . '%');
+            $query->where('nome', 'like', '%' . $nome . '%')-> orWhere('autor', 'like', '%' . $nome . '%');
         }
         if (!empty($autor)) {
             $query->where('autor', 'like', '%' . $nome . '%');
