@@ -35,7 +35,7 @@
                                 <div class="col-md-6">
                                     <select name="tipo" class="form-control">
                                         <option value="video">Vídeo</option>
-                                        <option value="audio">Audio</option>
+                                        <option value="audio">Áudio</option>
                                     </select>
 
                                     @error('nome')
@@ -48,7 +48,7 @@
 
                             <div class="form-group row">
                                 <label for="nome"
-                                       class="col-md-4 col-form-label text-md-right">Nome</label>
+                                       class="col-md-4 col-form-label text-md-right">Título</label>
 
                                 <div class="col-md-6">
                                     <input type="text"
@@ -105,11 +105,11 @@
                                     <select name="acesso" class="form-control">
                                         <option
                                             value="publico">
-                                            publico
+                                            Público
                                         </option>
                                         <option
                                             value="privado">
-                                            privado
+                                            Privado
                                         </option>
                                     </select>
 
@@ -123,10 +123,10 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary botao-login">
                                         Enviar
                                     </button>
-                                    <a class="btn btn-info" href="{{ route('material.index') }}">
+                                    <a class="btn btn-info botao-voltar" href="{{ route('material.index') }}">
                                         Voltar
                                     </a>
                                 </div>

@@ -10930,7 +10930,7 @@ width: 55px;
 }
 
 body{
-  background-color: #ADD8E6;
+  background-color: rgb(198, 237, 250);
 }
 
 .imagem-principal{
@@ -11037,8 +11037,9 @@ body{
   .box-part{
     background:#FFF;
     border-radius:0;
-    padding:60px 10px;
+    padding:12px 10px;
     margin:30px 0px;
+    min-height: 450px;
 }
 
 .botao-pesquisa{
@@ -11089,6 +11090,19 @@ body{
 
 .img-perfil{
   margin-bottom: 10px;
+  
+}
+
+.img-capa{
+  height: 270px;
+  margin-bottom: 10px;
+
+}
+
+.text-livro{
+  font-family: Nunito;
+  color: black;
+  font-size: 16px;
 }
 
 .border-video{
@@ -11123,3 +11137,10 @@ body{
   color: white;
   border-color:  #37BFC4;
 }
+
+.botao-voltar{
+  background-color: #37bfc49a;
+  color: white;
+  border-color:  #37bfc49a;
+}
+
