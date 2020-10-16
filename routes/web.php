@@ -23,7 +23,7 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::resources([
         'material' => 'MaterialController',
-        'audio' => 'AudioController',
+        'perfil' => 'PerfilController',
     ]);
     //rota adicional de pesquisa
     Route::post('material/search', 'MaterialController@search')->name('material.search');

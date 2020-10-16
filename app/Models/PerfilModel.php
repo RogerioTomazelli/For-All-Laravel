@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MaterialModel extends Model
+class PerfilModel extends Model
 {
-    protected $table = "material";
+    protected $table = "users";
     
 }

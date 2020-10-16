@@ -87,6 +87,7 @@ class MaterialController extends Controller
     {
         return view('material.edit', compact('material'));
     }
+    
 
     /**
      * Update the specified resource in storage.
