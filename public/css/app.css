@@ -11146,3 +11146,38 @@ body{
   border-color:  #37bfc49a;
 }
 
+.div-reset{
+  width: 50%;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-right: auto;
+}
+
+.botao-reset{
+  border: 0;
+  background-color: #37BFC4;
+  margin-top: 25px;
+  height: 40px;
+  border-radius: 25px;
+  width: 120px;
+  color: white;
+}
+
+.container-reset{
+  margin-top: 80px;
+}
+
+span.input-group-addon i {
+  color: #009edf;
+  font-size: 18px;
+}
+
+span.input-group-addon {
+  padding: 7px 10px 7px 10px;
+  background-color: #eee;
+  border-right: 1px solid #ddd;
+}
+
+.card-cadastrar{
+  margin-top: 25px;
+}
