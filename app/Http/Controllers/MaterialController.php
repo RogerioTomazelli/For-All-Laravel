@@ -46,6 +46,21 @@ class MaterialController extends Controller
         ]);
 
         $objMaterial = new MaterialModel();
+        if ($request->file('extensao')->isValid()) {
+            $file=$request->file('extensao');
+            $fileName=time().'.'.$file->getClientOriginalExtension();
+            $request->file('extensao')->storeAs('materiais', $fileName);
+            $objMaterial->extensao= $fileName;
+
+
+        }
+        if ($request->file('foto')->isValid()) {
+            $file=$request->file('foto');
+            $fileName=time().'.'.$file->getClientOriginalExtension();
+            $request->file('foto')->storeAs('capas', $fileName);
+            $objMaterial->foto= $fileName;
+
+        }
         $objMaterial->nome = $request->nome;
         $objMaterial->autor = $request->autor;
         $objMaterial->descricao = $request->descricao;
@@ -70,7 +85,7 @@ class MaterialController extends Controller
      */
     public function show(MaterialModel $material)
     {
-        //
+        
     }
 
     /**

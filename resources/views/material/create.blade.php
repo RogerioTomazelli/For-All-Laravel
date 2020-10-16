@@ -25,26 +25,9 @@
                             </div>
                         @endif
 
-                        <form method="POST" action="{{ route('material.store') }}">
+                        <form method="POST" action="{{ route('material.store') }}" enctype="multipart/form-data">
                         @csrf <!--Encripta o formulario -->
 
-                            <div class="form-group row">
-                                <label for="email"
-                                       class="col-md-4 col-form-label text-md-right">{{ __('Tipo Arquivo') }}</label>
-
-                                <div class="col-md-6">
-                                    <select name="tipo" class="form-control">
-                                        <option value="video">Vídeo</option>
-                                        <option value="audio">Áudio</option>
-                                    </select>
-
-                                    @error('nome')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
 
                             <div class="form-group row">
                                 <label for="nome"
@@ -81,6 +64,18 @@
                             </div>
 
                             <div class="form-group row">
+                                <label for="file"
+                                       class="col-md-4 col-form-label text-md-right">Foto da capa</label>
+
+                                <div class="col-md-6">
+                                    <input type=file
+                                              name="foto"
+                                              required>
+                                    </input>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label for="descricao"
                                        class="col-md-4 col-form-label text-md-right">Descrição</label>
 
@@ -98,9 +93,40 @@
                                     @enderror
                                 </div>
                             </div>
+
                             <div class="form-group row">
                                 <label for="email"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Tipo Arquivo') }}</label>
+
+                                <div class="col-md-6">
+                                    <select name="tipo" class="form-control">
+                                        <option value="video">Vídeo</option>
+                                        <option value="audio">Áudio</option>
+                                    </select>
+
+                                    @error('nome')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="file"
+                                       class="col-md-4 col-form-label text-md-right">Arquivo</label>
+
+                                <div class="col-md-6">
+                                    <input type=file
+                                              name="extensao"
+                                              required>
+                                    </input>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="email"
+                                       class="col-md-4 col-form-label text-md-right">Exibição</label>
                                 <div class="col-md-6">
                                     <select name="acesso" class="form-control">
                                         <option
