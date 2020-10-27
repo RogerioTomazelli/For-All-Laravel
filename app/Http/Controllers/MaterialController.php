@@ -47,26 +47,24 @@ class MaterialController extends Controller
 
         $objMaterial = new MaterialModel();
         if ($request->file('extensao')->isValid()) {
-            $file=$request->file('extensao');
-            $fileName=time().'.'.$file->getClientOriginalExtension();
-            $request->file('extensao')->storeAs('materiais', $fileName);
-            $objMaterial->extensao= $fileName;
-
+            $file = $request->file('extensao');
+            $fileName = time() . '.' . $file->getClientOriginalExtension();
+            $request->file('extensao')->storeAs('public/materiais', $fileName);
+            $objMaterial->extensao = $fileName; //eu fui na public errado sksksksksks
 
         }
         if ($request->file('foto')->isValid()) {
-            $file=$request->file('foto');
-            $fileName=time().'.'.$file->getClientOriginalExtension();
-            $request->file('foto')->storeAs('capas', $fileName);
-            $objMaterial->foto= $fileName;
-
+            $file = $request->file('foto');
+            $fileName = time() . '.' . $file->getClientOriginalExtension();
+            $request->file('foto')->storeAs('public/capas', $fileName);
+            $objMaterial->foto = $fileName;
         }
         $objMaterial->nome = $request->nome;
         $objMaterial->autor = $request->autor;
         $objMaterial->descricao = $request->descricao;
         $objMaterial->tipo = $request->tipo;
         $objMaterial->acesso = $request->acesso;
-        $objMaterial->usuario_id = Auth::id();//retorna o usuario_id
+        $objMaterial->usuario_id = Auth::id(); //retorna o usuario_id
 
         $objMaterial->save();
 
@@ -74,7 +72,6 @@ class MaterialController extends Controller
 
         return redirect()->route('material.index')
             ->with('success', 'Material Salvo com sucesso.');
-
     }
 
     /**
@@ -85,7 +82,6 @@ class MaterialController extends Controller
      */
     public function show(MaterialModel $material)
     {
-        
     }
 
     /**
@@ -102,7 +98,7 @@ class MaterialController extends Controller
     {
         return view('material.edit', compact('material'));
     }
-    
+
 
     /**
      * Update the specified resource in storage.
@@ -126,7 +122,7 @@ class MaterialController extends Controller
         $objMaterial->descricao = $request->descricao;
         $objMaterial->tipo = $request->tipo;
         $objMaterial->acesso = $request->acesso;
-        $objMaterial->usuario_id = $request->usuario_id;//retorna o usuario_id
+        $objMaterial->usuario_id = $request->usuario_id; //retorna o usuario_id
 
         $objMaterial->save();
 
@@ -157,12 +153,12 @@ class MaterialController extends Controller
         $nome = $request->nome;
         $autor = $request->autor;
         $tipo = $request->tipo;
-        $acesso =$request->acesso;
+        $acesso = $request->acesso;
 
         $query = DB::table('material');
 
         if (!empty($nome)) {
-            $query->where('nome', 'like', '%' . $nome . '%')-> orWhere('autor', 'like', '%' . $nome . '%');
+            $query->where('nome', 'like', '%' . $nome . '%')->orWhere('autor', 'like', '%' . $nome . '%');
         }
         if (!empty($autor)) {
             $query->where('autor', 'like', '%' . $nome . '%');
@@ -178,5 +174,4 @@ class MaterialController extends Controller
         // dd($materiais);
         return view('material.list', compact('materiais'));
     }
-
 }
