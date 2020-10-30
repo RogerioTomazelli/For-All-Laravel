@@ -9,9 +9,9 @@
             </div>
             <div class="col-xl-6">
             <h1 class="titulo-principal">FOR ALL</h1>
-            <p class="texto-principal"> O For All é um site 100% gratuito e seguro, que tem como 
+            <p class="texto-principal"> O For All é um site 100% gratuito, que tem como 
                 objetivo levar o acesso a leitura para crianças com deficiência visual e auditiva. Através de audiobooks 
-                e videobooks compartilhados pelos próprios usuários, muitos serão os beneficiados</p>
+                e videobooks, compartilhados pelos próprios usuários, muitos serão os beneficiados</p>
             </div>
         </div>
     </section>

@@ -18,7 +18,7 @@ class PerfilController extends Controller
     public function index()
     {
         $objPerfil = PerfilModel::orderBy('name')->get();
-        return view("perfil.perfil")->with("perfil", $objPerfil);
+        return view("profile.profile")->with("perfil", $objPerfil);
     }
 
     /**
@@ -40,11 +40,11 @@ class PerfilController extends Controller
      */
     public function edit(PerfilModel $users)
     {
-        return view('perfil.edit', compact('perfil'));
+        return view('profile.edit', compact('perfil'));
     }
     public function visualizar(PerfilModel $users)
     {
-        return view('perfil.edit', compact('perfil'));
+        return view('profile.edit', compact('perfil'));
     }
 
      /**
@@ -70,7 +70,7 @@ class PerfilController extends Controller
         $objPerfil->save();
 
 
-        return redirect()->route('perfil.perfil')->with('success', 'Perfil Editado com sucesso.');
+        return redirect()->route('profile.profile')->with('success', 'Perfil Editado com sucesso.');
     }
 
     /**
