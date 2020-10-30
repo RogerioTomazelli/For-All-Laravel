@@ -11,8 +11,6 @@
             <h2>{{$material->nome}}</h2>
             <p>Autor: {{$material->autor}}</p>
             <p>Descrição: {{$material->descricao}}</p>
-            <p>Gênero: </p>
-            <p>Duração: </p>
             <p></p>
         </div>
     </div>
