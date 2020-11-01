@@ -50,7 +50,7 @@ class MaterialController extends Controller
             $file = $request->file('extensao');
             $fileName = time() . '.' . $file->getClientOriginalExtension();
             $request->file('extensao')->storeAs('public/materiais', $fileName);
-            $objMaterial->extensao = $fileName; //eu fui na public errado sksksksksks
+            $objMaterial->extensao = $fileName;
 
         }
         if ($request->file('foto')->isValid()) {
