@@ -59,16 +59,21 @@
                             @endif
                         @else
                         <div class="row mr-5">
+                        <li class="nav-item anavla">
+                                    <a class="nav-link" style="color:white;  font-size: 22px;" href="/profile">Perfil</a>
+                            </li>
+                            <li class="nav-item anavla">
+                                    <a class="nav-link" style="color:white;  font-size: 22px;" href="/material/create">Enviar material</a>
+                            </li>
                         
                             <ul class="float-right">
+                            
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" style="color:white;  font-size: 20px;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/profile">Perfil</a>
-                                    <a class="dropdown-item" href="/material/create">Enviar material</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

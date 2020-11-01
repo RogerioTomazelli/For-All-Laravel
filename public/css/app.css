@@ -11181,3 +11181,10 @@ span.input-group-addon {
 .card-cadastrar{
   margin-top: 25px;
 }
+
+.anavla {
+  align-items: center;
+  padding-top: 12px;
+  padding-right: 20px;
+  
+}
