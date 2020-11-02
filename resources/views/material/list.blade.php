@@ -59,4 +59,8 @@
         </div>
     </div>
 </div>
+<a style="position:fixed; bottom:30px; right: 43px; font-size: 50px; color: #37bfc4" href="#rodape"><i class="fa fa-arrow-circle-down"></i></a>
+<footer id="rodape" class="rodape">
+    <h5>Em caso de dúvidas, sugestões ou reclamações, envie uma mensagem para o email <strong> for-all@gmail.com</strong></h5>
+</footer>
 @endsection
