@@ -23,7 +23,7 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::resources([
         'material' => 'MaterialController',
-        //'perfil' => 'PerfilController', //Utilizando o PerfilController
+        'perfil' => 'PerfilController', //Utilizando o PerfilController
         'profile' => 'UserController', //Utilizando o UserController
     ]);
     //rota adicional de pesquisa

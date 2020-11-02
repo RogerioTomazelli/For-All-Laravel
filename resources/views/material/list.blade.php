@@ -17,10 +17,9 @@
                 </div>
                 <div class="col-md-3">
                     <select class="form-control" id="tipo" name="tipo" class="browser-default validate">
-                        <option value="0" selected="selected">Tipo de mídia</option>
-                        <option value="0">Todos</option>
-                        <option value="video">Vídeo</option>
-                        <option value="audio">Audio</option>
+                        <option value="0" selected="selected">Áudios e vídeos</option>
+                        <option value="video">Vídeos</option>
+                        <option value="audio">Áudios</option>
                     </select>
                 </div>
 
@@ -37,18 +36,18 @@
             <div class="row">
                 @foreach($materiais as $dados)
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="box-part text-center">
-                        <a href="{{ route('material.edit',$dados->id) }}"> <img src="{{ Storage::url('capas/'.$dados->foto)}}" alt="avatar image" width="60%" class="img-capa"></a>
+                    <div class="box-part text-center" style="border-radius: 10px;">
+                        <a href="{{ route('material.edit',$dados->id) }}"> <img style="border-radius: 10px;" src="{{ Storage::url('capas/'.$dados->foto)}}" alt="avatar image" width="60%" class="img-capa"></a>
                         <div class="title" style="font-family: Nunito ">
                             <a style="color: black;" href="{{ route('material.edit',$dados->id) }}">
                                 <h4><b>{{$dados->nome}}</b></h4>
                             </a>
                         </div>
                         <div class="text text-livro">
-                            <span>Autor: {{$dados->autor}}</span>
+                            <span><strong>Autor:</strong> {{$dados->autor}}</span>
                         </div>
                         <div class="text text-livro">
-                            <span>Tipo: {{$dados->tipo}}</span>
+                            <span><strong>Tipo:</strong> {{$dados->tipo}}</span>
                         </div><br>
                         <a href="{{ route('material.edit',$dados->id) }}"><button type="button" class="btn btn-primary botao-login">
                                 Acessar Material
