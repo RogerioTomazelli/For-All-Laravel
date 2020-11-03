@@ -4,8 +4,15 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+
+            <div class="alert alert-info alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Atenção!</strong> Para confirmar a alteração, reescreva a senha ou altere-a!
+            </div>
+
             <div class="card">
-                <div class="card-header"><a class="btn btn-primary botao-voltar" href="{{ route('profile.index') }}">Voltar</a>&nbsp;&nbsp;&nbsp;&nbsp;{{ __('Editar Perfil') }}</div>
+
+                <div style="color: white;" class="card-header"><a class="btn btn-primary botao-voltar" href="{{ route('profile.index') }}">Voltar</a>&nbsp;&nbsp;&nbsp;&nbsp;{{ __('Editar Perfil') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
