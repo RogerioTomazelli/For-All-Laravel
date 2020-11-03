@@ -141,6 +141,7 @@ class MaterialController extends Controller
      */
     public function destroy($id)
     {
+        
         $material = MaterialModel::find($id);
 
         $material->delete();
@@ -166,6 +167,9 @@ class MaterialController extends Controller
         }
         if (!empty($tipo)) {
             $query->where('tipo', 'like', '%' . $tipo . '%');
+        }
+        if (!empty($acesso)) {
+            $query->where('acesso', 'like', '%' . $acesso . '%');
         }
         //$materiais = $query->orderBy('nome', 'DESC')->get();
         $materiais = $query->orderBy('nome')->paginate(20);

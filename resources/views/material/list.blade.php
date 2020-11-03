@@ -49,9 +49,10 @@
                         <div class="text text-livro">
                             <span><strong>Tipo:</strong> {{$dados->tipo}}</span>
                         </div><br>
-                        <a href="{{ route('material.edit',$dados->id) }}"><button type="button" class="btn btn-primary botao-login">
+                        <a  href="{{ route('material.edit',$dados->id) }}"><button type="button" class="btn btn-primary botao-login">
                                 Acessar material
-                            </button> </a>
+                            </button> </a><br>
+                        
                     </div>
                 </div>
                 @endforeach
