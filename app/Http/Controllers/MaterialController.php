@@ -67,7 +67,6 @@ class MaterialController extends Controller
         $objMaterial->autor = $request->autor;
         $objMaterial->descricao = $request->descricao;
         $objMaterial->tipo = $request->tipo;
-        $objMaterial->acesso = $request->acesso;
         $objMaterial->usuario_id = Auth::id(); //retorna o usuario_id
 
         $objMaterial->save();
@@ -125,7 +124,6 @@ class MaterialController extends Controller
         $objMaterial->autor = $request->autor;
         $objMaterial->descricao = $request->descricao;
         $objMaterial->tipo = $request->tipo;
-        $objMaterial->acesso = $request->acesso;
         $objMaterial->usuario_id = $request->usuario_id; //retorna o usuario_id
 
         $objMaterial->save();
@@ -157,7 +155,6 @@ class MaterialController extends Controller
         $nome = $request->nome;
         $autor = $request->autor;
         $tipo = $request->tipo;
-        $acesso = $request->acesso;
 
         $query = DB::table('material');
 
@@ -169,9 +166,6 @@ class MaterialController extends Controller
         }
         if (!empty($tipo)) {
             $query->where('tipo', 'like', '%' . $tipo . '%');
-        }
-        if (!empty($acesso)) {
-            $query->where('acesso', 'like', '%' . $acesso . '%');
         }
         //$materiais = $query->orderBy('nome', 'DESC')->get();
         $materiais = $query->orderBy('nome')->paginate(20);

@@ -20,9 +20,8 @@ class CreateMaterialModelsTable extends Migration
             $table->text("descricao",50)->nullable(); //nullable permite que salve valor nullo
             $table->string("tipo",50);
             $table->string("foto",150)->nullable();
-            $table->string("acesso",20)->nullable();
             $table->string("licenca",20)->nullable();
-            $table->string("avaliacao_possitiva",20)->nullable();
+            $table->string("avaliacao_positiva",20)->nullable();
             $table->string("avaliacao_negativa",20)->nullable();
             $table->string("nome_arquivo",150)->nullable();
             $table->string("extensao",150)->nullable();
@@ -39,6 +38,6 @@ class CreateMaterialModelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('material_models');
+        Schema::dropIfExists('material');
     }
 }
