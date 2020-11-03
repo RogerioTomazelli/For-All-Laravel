@@ -37,7 +37,7 @@
                 @foreach($materiais as $dados)
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="box-part text-center" style="border-radius: 10px;">
-                        <a href="{{ route('material.edit',$dados->id) }}"> <img style="border-radius: 10px;" src="{{ Storage::url('capas/'.$dados->foto)}}" alt="avatar image" width="60%" class="img-capa"></a>
+                        <a href="{{ route('material.edit',$dados->id) }}"> <img style="border-radius: 10px;" src="{{ url('/storage/public/capas/'.$dados->foto)}}" alt="avatar image" width="60%" class="img-capa"></a>
                         <div class="title" style="font-family: Nunito ">
                             <a style="color: black;" href="{{ route('material.edit',$dados->id) }}">
                                 <h4><b>{{$dados->nome}}</b></h4>
