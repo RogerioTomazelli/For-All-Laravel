@@ -25,15 +25,16 @@
                     </div>
                     @endif
 
-                    <form action="{{ route('profile.update',Auth::user()->id) }}" method="get">
+                    <form action="{{ route('profile.update', Auth::user()->id) }}" method="POST">
                         @csrf
+                        @method('put')
                         <input type="hidden" name="id" value="{{ Auth::user()->id }}" />
                         <label>Nome</label> </br>
-                        <input class="form-control" type="text" name="nome" value="{{ Auth::user()->name }}" /> </br>
+                        <input class="form-control" type="text" name="name" value="{{ Auth::user()->name }}" /> </br>
                         <label>E-mail</label> </br>
                         <input class="form-control" type="text" name="email" value="{{ Auth::user()->email }}" /> </br>
                         <label>Senha</label> </br>
-                        <input class="form-control" type="text" name="email" value="{{ Auth::user()->password }}" /> </br>
+                        <input class="form-control" type="text" name="password" value="" placeholder="******" /> </br>
                         <button type="submit" class="btn btn-primary botao-login">Atualizar</button>
                     </form>
                 </div>

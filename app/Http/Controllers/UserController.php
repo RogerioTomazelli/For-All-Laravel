@@ -6,7 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
-{    
+{
     /**
      * Display a listing of the resource.
      *
@@ -86,7 +86,8 @@ class UserController extends Controller
         $objPerfil = User::findorfail($id);
         $objPerfil->name = $request->name;
         $objPerfil->email = $request->email;
-        $objPerfil->password = $request->password;
+        $objPerfil->password = bcrypt($request->password);
+       
 
         $objPerfil->save();
 
@@ -108,5 +109,4 @@ class UserController extends Controller
 
         return redirect()->route('welcome')->with('success', 'Perfil deletado com Sucesso');
     }
-
 }

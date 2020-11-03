@@ -25,13 +25,16 @@ Route::group(['middleware' => 'auth'], function () {
         'material' => 'MaterialController',
         'perfil' => 'PerfilController', //Utilizando o PerfilController
         'profile' => 'UserController', //Utilizando o UserController
+        
     ]);
     //rota adicional de pesquisa
     Route::post('material/search', 'MaterialController@search')->name('material.search');
+    Route::get('material_enviado/{id}', 'MaterialController@index')->name('material.enviado');
+    Route::get('/home', 'MaterialController@index')->name('home');
 });
 
 Route::get('download/{file}', function ($file = '') {
     return response()->download(storage_path('app/public/upload/arquivos/' . $file));
 });
 
-Route::get('/home', 'MaterialController@index')->name('home');
+

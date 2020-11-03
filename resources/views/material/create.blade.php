@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                <div class="card-header">{{ __('Enviar Material') }}</div>
+                <div class="card-header" style="color:white; font-size:18px"><strong>{{ __('Enviar Material') }}</strong></div>
 
                     <div class="card-body">
                         @if (session('status'))

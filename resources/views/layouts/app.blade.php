@@ -66,13 +66,16 @@
                                 <a class="nav-link" style="color:white;  font-size: 22px;" href="/profile">Perfil</a>
                             </li>
                             <li class="nav-item anavla">
+                                <a class="nav-link" style="color:white;  font-size: 22px;" href="/material">Materiais</a>
+                            </li>
+                            <li class="nav-item anavla">
                                 <a class="nav-link" style="color:white;  font-size: 22px;" href="/material/create">Enviar material</a>
                             </li>
 
                             <ul class="float-right">
 
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" style="color:white;  font-size: 20px;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <li class="nav-item dropdown anavla">
+                                    <a id="navbarDropdown" style="color:white;  font-size: 22px;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>
 
@@ -88,13 +91,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <ul class="navbar-nav float-right">
-                                <li class="nav-item">
-                                    <a class="nav-link p-0" href="#">
-                                        <img src="https://i.ibb.co/tZjK826/cachorro.png" alt="avatar image" height="70" class="img-perfil">
-                                    </a>
-                                </li>
-                            </ul>
+                            
                         </div>
 
                         @endguest

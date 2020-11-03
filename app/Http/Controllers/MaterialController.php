@@ -14,9 +14,14 @@ class MaterialController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $objMaterial = MaterialModel::orderBy('nome')->get();
+        if ($request->id) {
+            $objMaterial = MaterialModel::where('usuario_id', $request->id)->orderBy('nome')->get();
+        } else {
+            $objMaterial = MaterialModel::orderBy('nome')->get();
+        }
+
         return view("material.list")->with("materiais", $objMaterial);
     }
 
@@ -51,7 +56,6 @@ class MaterialController extends Controller
             $fileName = time() . '.' . $file->getClientOriginalExtension();
             $request->file('extensao')->storeAs('public/materiais', $fileName);
             $objMaterial->extensao = $fileName;
-
         }
         if ($request->file('foto')->isValid()) {
             $file = $request->file('foto');
