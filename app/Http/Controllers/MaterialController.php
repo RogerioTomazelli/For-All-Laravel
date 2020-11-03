@@ -92,7 +92,7 @@ class MaterialController extends Controller
      */
     public function edit(MaterialModel $material)
     {
-        return view('material.edicao', compact('material'));
+        return view('material.edit', compact('material'));
     }
     public function visualizar(MaterialModel $material)
     {
