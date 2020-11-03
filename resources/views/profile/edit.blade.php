@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Editar Perfil') }}</div>
+                <div class="card-header"><a class="btn btn-primary botao-voltar" href="{{ route('profile.index') }}">Voltar</a>&nbsp;&nbsp;&nbsp;&nbsp;{{ __('Editar Perfil') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -25,17 +25,17 @@
                     </div>
                     @endif
 
-                    <form action="{{ route('perfil.update') }}" method="post">
+                    <form action="{{ route('profile.update',Auth::user()->id) }}" method="get">
                         @csrf
-                        <input type="hidden" name="id" value="{{$users->id}}" />
+                        <input type="hidden" name="id" value="{{ Auth::user()->id }}" />
                         <label>Nome</label> </br>
-                        <input type="text" name="nome" value="{{$users->name}}" /> </br>
+                        <input class="form-control" type="text" name="nome" value="{{ Auth::user()->name }}" /> </br>
                         <label>E-mail</label> </br>
-                        <input type="text" name="email" value="{{$users->email}}" /> </br>
-                        <label>Turma</label> </br>
+                        <input class="form-control" type="text" name="email" value="{{ Auth::user()->email }}" /> </br>
+                        <label>Senha</label> </br>
+                        <input class="form-control" type="text" name="email" value="{{ Auth::user()->password }}" /> </br>
                         <button type="submit" class="btn btn-primary botao-login">Atualizar</button>
                     </form>
-                    <a class="btn btn-primary botao-voltar" href="{{ route('perfil.index') }}">Voltar</a>
                 </div>
             </div>
         </div>

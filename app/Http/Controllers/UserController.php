@@ -57,14 +57,15 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $users)
+    public function edit($id)
+    {
+        //return view('profile.edit', compact('profile'));
+        return view('profile.edit');
+    }
+    /*public function visualizar(User $users)
     {
         return view('profile.edit', compact('profile'));
-    }
-    public function visualizar(User $users)
-    {
-        return view('profile.edit', compact('profile'));
-    }
+    }*/
 
     /**
      * Update the specified resource in storage.
@@ -77,38 +78,20 @@ class UserController extends Controller
     {
         //validação do formulário
         $request->validate([
-
             'name' => 'required|max:150',
+            'email' => 'required|max:150',
+            'password' => 'required|max:150',
         ]);
 
         $objPerfil = User::findorfail($id);
         $objPerfil->name = $request->name;
         $objPerfil->email = $request->email;
+        $objPerfil->password = $request->password;
 
         $objPerfil->save();
 
 
-        return redirect()->route('perfil.perfil')->with('success', 'Perfil Editado com sucesso.');
-    }
-
-    public function profileUpdate(Request $request)
-    {
-        $data = $request->all();
-        if ($data['password'] != null)
-            $data['password'] = bcrypt($data['password']);
-        else
-        unset($data['password']);
-
-        $update = auth()->user()->update($data);
-
-        if ($update)
-            return redirect()
-                ->route('profile')
-                ->with('sucess', 'Dados atualizados com sucesso!');
-
-        return redirect()
-            ->route('back')
-            ->with('error', 'Erro ao atualizados os dados!');
+        return redirect()->route('profile.index')->with('success', 'Perfil editado com sucesso!');
     }
 
     /**
@@ -126,29 +109,4 @@ class UserController extends Controller
         return redirect()->route('welcome')->with('success', 'Perfil deletado com Sucesso');
     }
 
-    public function profile()
-    {
-        $user = Auth::user();
-        return view('profile', compact('user', $user));
-    }
-
-    public function update_avatar(Request $request)
-    {
-
-        $request->validate([
-            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-
-        $user = Auth::user();
-
-        $avatarName = $user->id . '_avatar' . time() . '.' . request()->avatar->getClientOriginalExtension();
-
-        $request->avatar->storeAs('avatars', $avatarName);
-
-        $user->avatar = $avatarName;
-        $user->save();
-
-        return back()
-            ->with('success', 'You have successfully upload image.');
-    }
 }
