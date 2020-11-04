@@ -11076,6 +11076,7 @@ body{
   float: left;
   width: 25%;
   font-family: "Perpetua Titling MT", serif;
+  color: #37BFC4;
 }
 
 .descricao h2{
@@ -11141,9 +11142,9 @@ body{
 }
 
 .botao-voltar{
-  background-color: #37bfc49a;
+  background-color: #37BFC4;
   color: white;
-  border-color:  #37bfc49a;
+  border-color:  #37BFC4;
 }
 
 .div-reset{
@@ -11186,5 +11187,37 @@ span.input-group-addon {
   align-items: center;
   padding-top: 6px;
   padding-right: 20px;
-  
+}
+
+.cachorro-editar{
+  height: 500px;
+  margin-left: 500px;
+  margin-top: 10px;
+}
+
+.cachorro-perfil{
+  height: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.cachorro-material{
+  height: 500px;
+  margin-left: 2px;
+  margin-right: 900px;
+  margin-top: 10px;
+}
+
+.container-material{
+  background-color: white;
+  border-radius: 10px;
+}
+
+.cachorro-fones{
+   float: right;
+}
+
+.cachorro-computador{
+  float: left;
 }

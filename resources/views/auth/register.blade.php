@@ -9,8 +9,10 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="col-xs-12 text-center">
-                            <h2>Cadastro</h2>
+                        <div class="text-center icone-user">
+                        <a href="https://imgbb.com/">
+                            <img src="https://i.ibb.co/KV21jZC/cachorro-piscando.png" alt="avatar image" height="280" width=280px>
+                        </a>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-3 col-form-label text-md-right">{{ __('Nome') }}</label>

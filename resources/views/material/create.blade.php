@@ -139,6 +139,20 @@
                     </div>
                 </div>
             </div>
+            <div class="col">
+            <div class="cachorro-fones">
+                <a href="https://imgbb.com/">
+                    <img src="https://i.ibb.co/hVr0PJr/2-removebg-preview.png" alt="2-removebg-preview">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="cachorro-computador">
+                <a href="https://imgbb.com/">
+                    <img src="https://i.ibb.co/dWNMPsQ/cachorro-computador.png" alt="cachorro-computador">
+                </a>
+            </div>
+        </div>
         </div>
     </div>
 @endsection

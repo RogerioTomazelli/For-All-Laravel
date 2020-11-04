@@ -9,15 +9,23 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
+
                         <div class="text-center icone-user">
-                            <i class="fa fa-user-circle fa-5x"></i>
+                        <a href="https://imgbb.com/">
+                            <img src="https://i.ibb.co/cNQfy3J/cachorro-olhando.png" alt="avatar image" height="250" width=280px>
+                        </a>
                         </div>
+
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
-
-                            <div class="col-md-8">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
+                            <label for="email" class="col-md-3  col-form-label text-md-right">{{ __('E-Mail') }}</label>
+                            
+                            <div class="col-md-9">
+                                <div class="input-group">
+								    <span class="input-group-addon">
+                                        <i class="fa fa-envelope fa" aria-hidden="true"></i>
+                                    </span>
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                </div>
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -27,11 +35,16 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Senha') }}</label>
+                            <label for="password" class="col-md-3 col-form-label text-md-right">{{ __('Senha') }}</label>
 
-                            <div class="col-md-8">
+                            <div class="col-md-9">
+
+                             <div class="input-group">
+								<span class="input-group-addon">
+                                        <i class="fa fa-key fa" aria-hidden="true"></i>
+                                </span>
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
+                                </div>
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
