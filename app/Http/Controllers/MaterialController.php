@@ -141,9 +141,8 @@ class MaterialController extends Controller
      */
     public function destroy($id)
     {
-        
-        $material = MaterialModel::find($id);
-
+        $material = MaterialModel::findOrfail($id);
+       
         $material->delete();
 
         return redirect()->route('material.index')->with('success', 'Material Deletado com Sucesso');

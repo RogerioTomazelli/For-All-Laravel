@@ -36,7 +36,8 @@
             <div class="row">
                 @foreach($materiais as $dados)
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="box-part text-center" style="border-radius: 10px;"> <!-- src="{{ url('/storage/public/capas/'.$dados->foto)}}" -->
+                    <div class="box-part text-center" style="border-radius: 10px;">
+                        <!-- src="{{ url('/storage/public/capas/'.$dados->foto)}}" -->
                         <a href="{{ route('material.edit',$dados->id) }}"> <img style="border-radius: 10px;" src="{{ Storage::url('capas/'.$dados->foto)}}" alt="avatar image" width="60%" class="img-capa"></a>
                         <div class="title" style="font-family: Nunito ">
                             <a style="color: black;" href="{{ route('material.edit',$dados->id) }}">
@@ -49,10 +50,16 @@
                         <div class="text text-livro">
                             <span><strong>Tipo:</strong> {{$dados->tipo}}</span>
                         </div><br>
-                        <a  href="{{ route('material.edit',$dados->id) }}"><button type="button" class="btn btn-primary botao-login">
+                        <a href="{{ route('material.edit',$dados->id) }}"><button type="button" class="btn btn-primary botao-login">
                                 Acessar material
-                            </button> </a><br>
-                        
+                            </button> </a><br><br>
+                        <form action="{{ route('material.destroy', $dados->id) }}" class="form-horizontal" method="post" style="display: inline-block">
+                            {!! csrf_field() !!}
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="submit" value="Remover" onclick="return confirm('Tem certeza que deseja remover?');" class="btn btn-primary botao-login">
+                        </form>
+                        <br>
+
                     </div>
                 </div>
                 @endforeach

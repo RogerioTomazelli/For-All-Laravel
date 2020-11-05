@@ -31,7 +31,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('material/search', 'MaterialController@search')->name('material.search');
     Route::get('material_enviado/{id}', 'MaterialController@index')->name('material.enviado');
     Route::get('/home', 'MaterialController@index')->name('home');
+
 });
+
 
 Route::get('download/{file}', function ($file = '') {
     return response()->download(storage_path('app/public/upload/arquivos/' . $file));
