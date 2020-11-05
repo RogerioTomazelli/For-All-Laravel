@@ -59,7 +59,6 @@
                             <input type="submit" value="Remover" onclick="return confirm('Tem certeza que deseja remover?');" class="btn btn-primary botao-login">
                         </form>
                         <br>
-
                     </div>
                 </div>
                 @endforeach

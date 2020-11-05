@@ -149,8 +149,7 @@ class MaterialController extends Controller
     }
 
 
-    public
-    function search(Request $request)
+    public function search(Request $request)
     {
         $nome = $request->nome;
         $autor = $request->autor;

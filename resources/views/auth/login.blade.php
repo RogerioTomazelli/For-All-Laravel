@@ -11,25 +11,25 @@
                         @csrf
 
                         <div class="text-center icone-user">
-                        <a href="https://imgbb.com/">
-                            <img src="https://i.ibb.co/cNQfy3J/cachorro-olhando.png" alt="avatar image" height="250" width=280px>
-                        </a>
+                            <a href="https://imgbb.com/">
+                                <img src="https://i.ibb.co/cNQfy3J/cachorro-olhando.png" alt="avatar image" height="250" width=280px>
+                            </a>
                         </div>
 
                         <div class="form-group row">
                             <label for="email" class="col-md-3  col-form-label text-md-right">{{ __('E-Mail') }}</label>
-                            
+
                             <div class="col-md-9">
                                 <div class="input-group">
-								    <span class="input-group-addon">
+                                    <span class="input-group-addon">
                                         <i class="fa fa-envelope fa" aria-hidden="true"></i>
                                     </span>
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 </div>
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
@@ -39,16 +39,16 @@
 
                             <div class="col-md-9">
 
-                             <div class="input-group">
-								<span class="input-group-addon">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
                                         <i class="fa fa-key fa" aria-hidden="true"></i>
-                                </span>
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                    </span>
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                 </div>
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
@@ -70,9 +70,15 @@
                                 <button type="submit" class="btn btn-primary botao-login">
                                     <i class="fa fa-sign-in"></i>
                                     {{ __('Login') }}
-                                </button>   
-                            </div>
-                            
+                                </button>
+                            </div><br><br>
+                            <div style="text-align: center;">
+                            @if (Route::has('password.request'))
+                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                                {{ __('Esqueceu a senha? Clique aqui para recuperá-la') }}
+                            </a>
+                            @endif
+                        </div>
                         </div>
                     </form>
                 </div>
