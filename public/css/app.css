@@ -11068,7 +11068,7 @@ body{
 }
 
 .edit-principal{
-  min-height: 768px;
+  min-height: 500px;
   padding-top: 20px;
 }
 
@@ -11191,8 +11191,10 @@ span.input-group-addon {
 
 .cachorro-editar{
   height: 500px;
-  margin-left: 500px;
   margin-top: 10px;
+  position: fixed;
+  bottom: 0px;
+  right: 190px;
 }
 
 .cachorro-perfil{
@@ -11212,12 +11214,29 @@ span.input-group-addon {
 .container-material{
   background-color: white;
   border-radius: 10px;
+  white-space: normal;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .cachorro-fones{
-   float: right;
+   position: fixed;
+   bottom: -50px;
+   right: 50px;
 }
 
 .cachorro-computador{
-  float: left;
+  position: fixed;
+  bottom: -65px;
+  left: 50px;
+}
+
+.desk{
+  white-space: normal;
+}
+
+.cachorro-foralzinho{
+  position: fixed;
+  right: -30px;
+  bottom: -90px;
 }
