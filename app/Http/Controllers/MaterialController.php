@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\MaterialModel;
+use App\User;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class MaterialController extends Controller
 {
@@ -142,12 +145,32 @@ class MaterialController extends Controller
     public function destroy($id)
     {
         $material = MaterialModel::findOrfail($id);
-       
-        $material->delete();
 
-        return redirect()->route('material.index')->with('success', 'Material Deletado com Sucesso');
+        if (!$user = User::find($material->usuario_id))
+            return redirect()->back();
+
+        try {
+
+            if ($material->delete()) {
+
+                if (Storage::exists("public/materiais/" . $material->extensao) && Storage::exists('public/capas/' . $material->foto)) {
+
+                    Storage::delete(["public/materiais/" . $material->extensao, 'public/capas/' . $material->foto]);
+                }
+            } else {
+                return redirect()
+                    ->back()
+                    ->with('error', 'Falha ao deletar!');
+            }
+
+            return redirect()->route('material.index')->with('success', 'Material Deletado com Sucesso');
+        } catch (Exception $e) {
+
+            return redirect()
+                ->back()
+                ->with('error', 'Falha ao deletar!' . $e->getMessage());
+        }
     }
-
 
     public function search(Request $request)
     {

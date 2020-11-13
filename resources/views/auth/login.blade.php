@@ -24,7 +24,7 @@
                                     <span class="input-group-addon">
                                         <i class="fa fa-envelope fa" aria-hidden="true"></i>
                                     </span>
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    <input id="email" type="email" placeholder="Digite seu email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 </div>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -43,7 +43,7 @@
                                     <span class="input-group-addon">
                                         <i class="fa fa-key fa" aria-hidden="true"></i>
                                     </span>
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                    <input id="password" placeholder="Digite sua senha" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                 </div>
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">

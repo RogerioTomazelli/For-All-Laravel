@@ -53,11 +53,14 @@
                         <a href="{{ route('material.edit',$dados->id) }}"><button type="button" class="btn btn-primary botao-login">
                                 Acessar material
                             </button> </a><br><br>
+
+                        @if($dados->usuario_id === Auth::id())
                         <form action="{{ route('material.destroy', $dados->id) }}" class="form-horizontal" method="post" style="display: inline-block">
                             {!! csrf_field() !!}
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="submit" value="Remover" onclick="return confirm('Tem certeza que deseja remover?');" class="btn btn-primary botao-login">
                         </form>
+                        @endif
                         <br>
                     </div>
                 </div>
