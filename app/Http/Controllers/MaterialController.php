@@ -67,6 +67,7 @@ class MaterialController extends Controller
             $objMaterial->foto = $fileName;
         }
         $objMaterial->nome = $request->nome;
+        $objMaterial->fonte = $request->fonte;
         $objMaterial->autor = $request->autor;
         $objMaterial->descricao = $request->descricao;
         $objMaterial->tipo = $request->tipo;
@@ -124,6 +125,7 @@ class MaterialController extends Controller
 
         $objMaterial = MaterialModel::findorfail($id);
         $objMaterial->nome = $request->nome;
+        $objMaterial->fonte = $request->fonte;
         $objMaterial->autor = $request->autor;
         $objMaterial->descricao = $request->descricao;
         $objMaterial->tipo = $request->tipo;
