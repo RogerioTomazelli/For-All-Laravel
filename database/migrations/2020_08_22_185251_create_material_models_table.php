@@ -25,6 +25,7 @@ class CreateMaterialModelsTable extends Migration
             $table->string("avaliacao_negativa",20)->nullable();
             $table->string("nome_arquivo",150)->nullable();
             $table->string("extensao",150)->nullable();
+            $table->string("fonte",50);
             $table->unsignedBigInteger('usuario_id')->nullable();//chave estrangeira
             $table->foreign('usuario_id')->references('id')->on('users');//criando a chave estrangeira
             $table->timestamps();
