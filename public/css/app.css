@@ -8627,7 +8627,7 @@ button.bg-dark:focus {
 
 .pt-4,
 .py-4 {
-  padding-top: 1.5rem !important;
+  padding-top: 1.8rem !important;
 }
 
 .pr-4,
@@ -11158,6 +11158,7 @@ body{
   border: 0;
   background-color: #37BFC4;
   margin-top: 25px;
+  margin-bottom: 25px;
   height: 40px;
   border-radius: 25px;
   width: 120px;
@@ -11222,13 +11223,13 @@ span.input-group-addon {
 .cachorro-fones{
    position: fixed;
    bottom: -50px;
-   right: 50px;
+   right: 20px;
 }
 
 .cachorro-computador{
   position: fixed;
   bottom: -65px;
-  left: 50px;
+  left: 10px;
 }
 
 .desk{
@@ -11239,4 +11240,37 @@ span.input-group-addon {
   position: fixed;
   right: -30px;
   bottom: -90px;
+}
+
+.card-reset{
+  position: relative;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.Titulo-reset{
+  font-family: "Nunito", sans-serif;
+  font-size: 25px;
+  margin-top: 5px;
+  color: white;
+}
+
+.card-header-reset{
+  padding-inline-start: 40px;
+  background-color:#37BFC4;
+  border-bottom: 1px solid #37BFC4;
+}
+
+.inform-reset{
+  font-family:"Nunito", sans-serif;
+  font-size: 15px;
+}
+
+.container-reset{
+  width: 80%;
+  padding-right: 90px;
+  padding-left: 90px;
+  padding-bottom: 15px;
+  margin-right: 200px;
+  margin-left: 160px;
 }

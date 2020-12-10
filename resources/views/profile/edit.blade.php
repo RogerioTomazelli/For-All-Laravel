@@ -4,6 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <div class="cachorro-computador">
+                <a href="https://imgbb.com/">
+                    <img src="https://i.ibb.co/dWNMPsQ/cachorro-computador.png" alt="cachorro-computador" height="300">
+                </a>
+            </div>
 
             <div class="alert alert-info alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -46,6 +51,13 @@
                     </form>
                 </div>
             </div>
+            <div class="col-md-2">
+            <div class="cachorro-fones">
+                <a href="https://imgbb.com/">
+                    <img src="https://i.ibb.co/hVr0PJr/2-removebg-preview.png" alt="2-removebg-preview" height="300">
+                </a>
+            </div>
+        </div>
         </div>
     </div>
 </div>

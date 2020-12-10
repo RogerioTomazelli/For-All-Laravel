@@ -1,17 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-reset">
+<div class="col-md-12  card-reset">
+<div class="card-header-reset" style="color:white; font-size: 40px"><strong class="Titulo-reset">{{ __('Reset de senha') }}</strong></div>
     <div class="row justify-content-center">
         <div class="col-md-12 text-center container-reset">
 
-            <h1> <b> Reset de senha </b></h1>
-                <span>Entre com seu e-mail registrado. Nós enviaremos um e-mail com o link para resetar sua senha</span>
+                <span class="inform-reset">Entre com seu e-mail registrado. Nós enviaremos um e-mail com o link para resetar sua senha</span>
                 <form method="POST" action="{{ route('password.email') }}">
                         @csrf
 
+                        <div class="text-center icone-user">
+                            <a href="https://imgbb.com/">
+                                <img src="https://i.ibb.co/cNQfy3J/cachorro-olhando.png" alt="avatar image" height="200" width=200px>
+                            </a>
+                        </div>
+                        
                         <div class="div-reset">
-                            <label for="email" class="col-md-12 col-form-label text-md-left">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-12 col-form-label text-md-left">{{ __('Endereço de e-mail') }}</label>
 
                             <div class="col-md-12">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -72,5 +79,6 @@
             </div>
         </div> -->
     </div>
+</div>
 </div>
 @endsection
